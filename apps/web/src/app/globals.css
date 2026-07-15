@@ -1,52 +1,83 @@
-:root {
-  --bg: #f6f1ea;
-  --fg: #1c1917;
-  --accent: #0f766e;
-  --muted: #78716c;
+@import "tailwindcss";
+
+@theme {
+  --color-sage: #c8d9b8;
+  --color-sage-deep: #b5c9a3;
+  --color-ink: #141414;
+  --color-mute: #5c5c5c;
+  --color-line: #e5e5e5;
+  --color-paper: #ffffff;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background:
-    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(15, 118, 110, 0.12), transparent),
-    linear-gradient(165deg, #faf7f2 0%, #efe6da 100%);
-  color: var(--fg);
-  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-main {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  margin: 0 0 0.75rem;
+@keyframes pan-in {
+  from {
+    opacity: 0;
+    transform: translateX(28px) scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
 
-p {
-  color: var(--muted);
-  font-size: 1.125rem;
-  line-height: 1.6;
-  margin: 0 0 1.5rem;
+.anim-fade-up {
+  animation: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
+.anim-fade-up-delay {
+  animation: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
 }
 
-a:hover {
-  text-decoration: underline;
+.anim-fade-up-delay-2 {
+  animation: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+.anim-pan-in {
+  animation: pan-in 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.anim-fade-in {
+  animation: fade-in 0.7s ease both;
 }
