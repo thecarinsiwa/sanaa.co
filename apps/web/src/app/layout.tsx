@@ -16,9 +16,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Sanaa — tenues professionnelles',
+  title: 'Sanaa — professional clothing',
   description:
-    'Manufacture de vêtements professionnels : santé, hôtellerie, industrie et sur-mesure.',
+    'Professional clothing manufacture: health, hospitality, industry and made-to-measure.',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   } as CSSProperties;
 
   return (
-    <html lang="fr" className={`${syne.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
       <body className="font-body antialiased" style={fontVars}>
         {children}
       </body>

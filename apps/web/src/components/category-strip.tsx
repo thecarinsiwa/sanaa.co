@@ -3,23 +3,23 @@ import Link from 'next/link';
 
 const categories = [
   {
-    href: '/collections/sante',
-    label: 'Santé & bien-être',
+    href: '/collections/health',
+    label: 'Health & wellness',
     icon: HandHelping,
   },
   {
-    href: '/collections/hotellerie',
-    label: 'Hôtellerie & restauration',
+    href: '/collections/hospitality',
+    label: 'Hotel & catering',
     icon: UtensilsCrossed,
   },
   {
-    href: '/collections/industrie',
-    label: 'Industrie & artisanat',
+    href: '/collections/industry',
+    label: 'Industry & crafts',
     icon: Factory,
   },
   {
-    href: '/collections/securite',
-    label: 'Sécurité',
+    href: '/collections/safety',
+    label: 'Safety',
     icon: HardHat,
   },
 ];
@@ -28,7 +28,7 @@ export function CategoryStrip() {
   return (
     <section
       className="border-t border-line bg-paper"
-      aria-label="Collections par métier"
+      aria-label="Shop by sector"
     >
       <ul className="mx-auto grid max-w-[90rem] grid-cols-2 lg:grid-cols-4">
         {categories.map((category, index) => {

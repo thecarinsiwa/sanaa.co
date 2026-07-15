@@ -12,11 +12,20 @@ Front **boutique client** de Sanaa.co (Next.js App Router).
 
 ## Design (accueil)
 
-Inspiré d’une manufacture textile professionnelle (header 2 niveaux, hero vert pastel plein cadre, bandeau métiers) :
+Inspiré d’une manufacture textile professionnelle (header 2 niveaux, hero vert pastel plein cadre, bandeau métiers) — **routes et libellés en anglais** :
 
-- `SiteHeader` — barre utilitaire + nav + panier
-- `Hero` — carrousel marque / promesse / CTA / visuel
-- `CategoryStrip` — accès rapide par secteur
+| Route | Page |
+|-------|------|
+| `/` | Home |
+| `/about` | About us |
+| `/contact` | Contact |
+| `/search` | Search |
+| `/account` | Sign in |
+| `/cart` | Cart |
+| `/collections/health` | Health — Wellness |
+| `/collections/safety` | Safety |
+| `/collections/hospitality` | Hotel and catering |
+| `/collections/industry` | Industry — crafts |
 
 ## Scripts
 

@@ -7,34 +7,34 @@ import { useState } from 'react';
 
 const slides = [
   {
-    id: 'sante',
-    title: 'Vos tenues professionnelles, en toute simplicité.',
-    text: 'Qualité, innovation et engagement — des pièces conçues pour le terrain, disponibles aussi en sur-mesure.',
-    cta: 'Santé / bien-être',
-    href: '/collections/sante',
+    id: 'health',
+    title: 'Your professional outfits, made simple.',
+    text: 'Quality, innovation and care — pieces built for the job, also available made-to-measure.',
+    cta: 'Health / Wellness',
+    href: '/collections/health',
     image:
       'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80',
-    imageAlt: 'Professionnels de santé en tenue',
+    imageAlt: 'Healthcare professionals in workwear',
   },
   {
-    id: 'hotellerie',
-    title: 'L’élégance au service de l’hospitalité.',
-    text: 'Uniformes hôteliers et restauration, ajustés pour le confort d’une journée complète.',
-    cta: 'Hôtellerie / restauration',
-    href: '/collections/hotellerie',
+    id: 'hospitality',
+    title: 'Elegance that serves hospitality.',
+    text: 'Hotel and catering uniforms designed for comfort across a full shift.',
+    cta: 'Hotel / Catering',
+    href: '/collections/hospitality',
     image:
       'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=80',
-    imageAlt: 'Équipe hôtellerie en uniforme',
+    imageAlt: 'Hospitality team in uniform',
   },
   {
-    id: 'industrie',
-    title: 'Des vêtements faits pour l’atelier.',
-    text: 'Résistance, liberté de mouvement et finitions pensées pour l’industrie et l’artisanat.',
-    cta: 'Industrie / artisanat',
-    href: '/collections/industrie',
+    id: 'industry',
+    title: 'Clothing made for the workshop.',
+    text: 'Durability, freedom of movement and finishes for industry and crafts.',
+    cta: 'Industry / Crafts',
+    href: '/collections/industry',
     image:
       'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
-    imageAlt: 'Travailleurs en tenue industrielle',
+    imageAlt: 'Workers in industrial clothing',
   },
 ];
 
@@ -48,7 +48,7 @@ export function Hero() {
   return (
     <section
       className="relative flex min-h-[calc(100vh-7.5rem)] flex-col overflow-hidden bg-sage lg:min-h-[calc(100vh-8rem)]"
-      aria-label="Présentation"
+      aria-label="Featured"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_85%_40%,rgba(255,255,255,0.35),transparent_60%)]" />
 
@@ -82,7 +82,7 @@ export function Hero() {
             <button
               type="button"
               onClick={prev}
-              aria-label="Diapositive précédente"
+              aria-label="Previous slide"
               className="flex h-11 w-11 items-center justify-center bg-paper text-ink shadow-sm transition-transform duration-200 hover:-translate-x-0.5"
             >
               <ChevronLeft className="h-5 w-5" strokeWidth={1.75} />
@@ -90,7 +90,7 @@ export function Hero() {
             <button
               type="button"
               onClick={next}
-              aria-label="Diapositive suivante"
+              aria-label="Next slide"
               className="flex h-11 w-11 items-center justify-center bg-paper text-ink shadow-sm transition-transform duration-200 hover:translate-x-0.5"
             >
               <ChevronRight className="h-5 w-5" strokeWidth={1.75} />
