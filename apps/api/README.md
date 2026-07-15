@@ -8,6 +8,10 @@ Backend métier de Sanaa.co : **point unique** entre les interfaces Next.js (`ap
 - Port par défaut : `4000`
 - Préfixe global : `/api`
 - Health check : `GET /api/health`
+- **Swagger UI** : [`http://localhost:4000/api/docs`](http://localhost:4000/api/docs)
+- OpenAPI JSON : `GET /api/docs-json`
+- **Swagger UI** : [http://localhost:4000/api/docs](http://localhost:4000/api/docs)
+- OpenAPI JSON : [http://localhost:4000/api/docs-json](http://localhost:4000/api/docs-json)
 
 ## Rôle
 

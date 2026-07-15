@@ -73,6 +73,8 @@ pnpm dev:web      # http://localhost:3000
 pnpm dev:admin    # http://localhost:3001
 ```
 
+Swagger (API) : [http://localhost:4000/api/docs](http://localhost:4000/api/docs)
+
 Prérequis : **Node ≥ 20**, **pnpm**, **MySQL 8.0.13+** (voir `database/`).
 
 ---
