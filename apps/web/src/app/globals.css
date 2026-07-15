@@ -1,0 +1,52 @@
+:root {
+  --bg: #f6f1ea;
+  --fg: #1c1917;
+  --accent: #0f766e;
+  --muted: #78716c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(15, 118, 110, 0.12), transparent),
+    linear-gradient(165deg, #faf7f2 0%, #efe6da 100%);
+  color: var(--fg);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin: 0 0 0.75rem;
+}
+
+p {
+  color: var(--muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

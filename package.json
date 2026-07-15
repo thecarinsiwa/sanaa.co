@@ -1,0 +1,17 @@
+{
+  "name": "sanaa.co",
+  "private": true,
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter @sanaa/api --filter @sanaa/web --filter @sanaa/admin run dev",
+    "dev:api": "pnpm --filter @sanaa/api dev",
+    "dev:web": "pnpm --filter @sanaa/web dev",
+    "dev:admin": "pnpm --filter @sanaa/admin dev",
+    "build": "pnpm -r --filter @sanaa/api --filter @sanaa/web --filter @sanaa/admin run build",
+    "lint": "pnpm -r --filter @sanaa/api --filter @sanaa/web --filter @sanaa/admin run lint",
+    "start:api": "pnpm --filter @sanaa/api start:prod"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

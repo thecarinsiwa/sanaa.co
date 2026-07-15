@@ -46,20 +46,34 @@ Les **pôles** ci-dessous sont les briques métier. Ils ne sont pas isolés : un
 
 ## Architecture logicielle
 
-Monorepo découpé en quatre espaces :
+Monorepo **pnpm** avec NestJS (API) et Next.js (fronts) :
 
-| Dossier | Rôle |
-|---------|------|
-| `web/` | Front boutique (expérience client) |
-| `admin/` | Back-office (catalogue, atelier, stocks, CRM, finance) |
-| `api/` | API métier (règles métier, accès données) |
-| `database/` | Schéma, migrations et seeds |
+| Dossier | Package | Stack | Port |
+|---------|---------|-------|------|
+| `apps/web` | `@sanaa/web` | Next.js 15 — boutique | `3000` |
+| `apps/admin` | `@sanaa/admin` | Next.js 15 — back-office | `3001` |
+| `apps/api` | `@sanaa/api` | NestJS — API métier | `4000` |
+| `packages/tsconfig` | `@sanaa/tsconfig` | Configs TypeScript partagées | — |
+| `database/` | — | Schéma MySQL (`schema.sql`) | — |
 
 ```text
-[ Client ] ──► web/ ──┐
-                      ├──► api/ ──► database/
-[ Staff ]  ──► admin/ ┘
+[ Client ] ──► apps/web    ──┐
+                             ├──► apps/api ──► database/
+[ Staff ]  ──► apps/admin  ──┘
 ```
+
+### Démarrage rapide
+
+```bash
+pnpm install
+pnpm dev          # API + web + admin en parallèle
+# ou séparément :
+pnpm dev:api      # http://localhost:4000/api
+pnpm dev:web      # http://localhost:3000
+pnpm dev:admin    # http://localhost:3001
+```
+
+Prérequis : **Node ≥ 20**, **pnpm**, **MySQL 8.0.13+** (voir `database/`).
 
 ---
 
