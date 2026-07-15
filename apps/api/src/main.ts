@@ -1,9 +1,19 @@
+import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      forbidNonWhitelisted: true,
+      transform: true,
+      transformOptions: { enableImplicitConversion: true },
+    }),
+  );
 
   app.enableCors({
     origin: [
@@ -18,20 +28,36 @@ async function bootstrap() {
   const swaggerConfig = new DocumentBuilder()
     .setTitle('Sanaa.co API')
     .setDescription(
-      'API métier Sanaa.co — boutique, personnalisation, atelier (GPAO), stocks et finance.',
+      'CRUD API for Sanaa.co — catalog, commerce, CRM, purchasing and logistics.',
     )
-    .setVersion('0.0.1')
+    .setVersion('0.1.0')
     .addBearerAuth(
       {
         type: 'http',
         scheme: 'bearer',
         bearerFormat: 'JWT',
-        description: 'JWT access token (à brancher avec l’auth)',
+        description: 'JWT access token (auth coming next)',
       },
       'access-token',
     )
-    .addTag('root', 'Métadonnées de l’API')
-    .addTag('health', 'Disponibilité du service')
+    .addTag('root', 'API metadata')
+    .addTag('health', 'Health check')
+    .addTag('users', 'Users CRUD')
+    .addTag('addresses', 'Addresses CRUD')
+    .addTag('categories', 'Categories CRUD')
+    .addTag('subcategories', 'Subcategories CRUD')
+    .addTag('products', 'Products CRUD')
+    .addTag('product-variants', 'Product variants CRUD')
+    .addTag('carts', 'Carts CRUD')
+    .addTag('cart-items', 'Cart items CRUD')
+    .addTag('orders', 'Orders CRUD')
+    .addTag('order-items', 'Order items CRUD')
+    .addTag('payments', 'Payments CRUD')
+    .addTag('shipments', 'Shipments CRUD')
+    .addTag('quotes', 'Quotes CRUD')
+    .addTag('suppliers', 'Suppliers CRUD')
+    .addTag('raw-materials', 'Raw materials CRUD')
+    .addTag('warehouses', 'Warehouses CRUD')
     .build();
 
   const document = SwaggerModule.createDocument(app, swaggerConfig);
