@@ -177,16 +177,16 @@ Schéma MySQL en anglais (`database/schema.sql`).
 
 | Pôle | Tables |
 |------|--------|
-| Vente & Catalogue | `products`, `product_variants`, `categories`, `subcategories`, `customer_reviews`, `carts`, `orders`, `order_items`, `payments`, `shipments` |
-| Production & Atelier | `work_orders`, `production_steps`, `production_tracking`, `employees`, `workstations`, `production_plans`, `workstation_assignments`, `operation_times`, `quality_checks`, `production_reworks` |
-| Matières & Fournisseurs | `raw_materials`, `material_stock`, `suppliers`, `supplier_orders`, `supplier_order_items`, `bills_of_materials`, `supplier_receipts` |
+| Vente & Catalogue | `products`, `product_variants`, `product_media`, `categories`, `subcategories`, `customer_reviews`, `carts`, `cart_items`, `orders`, `order_items`, `order_status_histories`, `payments`, `shipments` |
+| Production & Atelier | `work_orders`, `work_order_status_histories`, `production_steps`, `production_tracking`, `employees`, `workstations`, `production_plans`, `workstation_assignments`, `operation_times`, `quality_checks`, `production_reworks` |
+| Matières & Fournisseurs | `raw_materials`, `material_stock`, `suppliers`, `supplier_orders`, `supplier_order_items`, `bills_of_materials`, `supplier_receipts`, `supplier_receipt_items` |
 | Personnalisation | `customer_measurements`, `pattern_models`, `customization_requests`, `embroidery_files` |
-| Logistique & Stocks | `warehouses`, `inventory_counts`, `inventory_count_items`, `stock_reservations`, `stock_transfers` |
-| Tarifs & Promotions | `promotion_rules`, `promotion_rule_targets`, `price_lists` |
-| CRM & Devis | `quotes`, `quote_items`, `customer_interactions`, `customer_segments` |
-| Financier | `customer_invoices`, `supplier_invoices`, `expenses` |
+| Logistique & Stocks | `warehouses`, `finished_goods_stock`, `inventory_counts`, `inventory_count_items`, `stock_reservations`, `stock_transfers` |
+| Tarifs & Promotions | `promotion_rules`, `promotion_rule_targets`, `promotion_redemptions`, `price_lists` |
+| CRM & Devis | `quotes`, `quote_items`, `customer_interactions`, `customer_segments`, `customer_segment_members` |
+| Financier | `customer_invoices`, `customer_invoice_items`, `supplier_invoices`, `expenses` |
 | Attributs dynamiques | `product_attributes`, `attribute_values` |
-| Sécurité & Audit | `users`, `audit_logs` |
+| Sécurité & Audit | `users`, `audit_logs`, `addresses` |
 | SAV | `return_requests` |
 
 ---
