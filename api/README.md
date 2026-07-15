@@ -38,13 +38,13 @@ admin/ ┘
 | CRM | Devis, segments, interactions |
 | Finance | Factures, dépenses |
 | SAV | Demandes de retour |
-| Auth & audit | Utilisateurs, sessions, `journaux_audit` |
+| Auth & audit | Users, sessions, `audit_logs` |
 
 ## Principes
 
 - **Une seule source de vérité métier** : pas de duplication des règles critiques dans `web/` ou `admin/`
 - Respect du **soft delete** (`deleted_at`) sur les lectures / écritures
-- Transactions pour les flux multi-tables (ex. commande + paiement + réservation stock)
+- Transactions pour les flux multi-tables (ex. order + payment + stock reservation)
 - Séparation claire routes publiques (boutique) / routes authentifiées (admin & compte client)
 
 ## Convention

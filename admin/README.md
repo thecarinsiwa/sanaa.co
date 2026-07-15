@@ -48,8 +48,8 @@ Staff → admin/ → api/ → database/
 ```
 
 - Couvre **tous les pôles métier** (vue interne)
-- Droits d’accès gérés via `utilisateurs` (et futurs rôles / permissions)
-- Les actions sensibles doivent être traçables dans `journaux_audit` (côté API)
+- Droits d’accès gérés via `users` (et futurs rôles / permissions)
+- Les actions sensibles doivent être traçables dans `audit_logs` (côté API)
 
 ## Convention
 
